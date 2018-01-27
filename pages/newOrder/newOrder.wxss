@@ -1,0 +1,5 @@
+/* pages/newOrder/newOrder.wxss */
+.flex_row{
+ display:flex;
+ flex-direction:row;
+}
