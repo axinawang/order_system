@@ -1,0 +1,1 @@
+ <button type="primary" bindtap="toCreate"> 创建新用户 </button>

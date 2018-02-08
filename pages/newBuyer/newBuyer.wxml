@@ -1,0 +1,26 @@
+<form bindsubmit="formSubmit" bindreset="formReset" class='container'>
+ 
+    <view class="flex_row">
+     <view >姓名： </view>
+     <input name="name" placeholder="姓名" />      
+    </view>
+    <view class="flex_row">
+     <view >电话： </view>
+     <input name="telephone" placeholder="电话" />      
+    </view>
+    <view class="flex_row">
+     <view >地址： </view>
+     <input name="address" placeholder="地址" />      
+    </view>
+    <view class="flex_row">
+     <view >备注： </view>
+     <input name="remark" placeholder="备注" />      
+    </view>
+
+    
+
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>
