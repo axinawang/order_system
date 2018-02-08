@@ -1,8 +1,10 @@
 {
-  "pages":[    
+  "pages":[  
+    "pages/home/home",  
     "pages/buyer/buyer",
     "pages/newBuyer/newBuyer",
-    "pages/home/home",
+    "pages/buyerDetail/buyerDetail",
+    
     "pages/group/group",
     "pages/shopDetail/shopDetail",
     "pages/me/me",

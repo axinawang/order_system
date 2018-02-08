@@ -1,18 +1,18 @@
-// pages/buyer/buyer.js
+// pages/buyerDetail/buyerDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      list:null
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+  
   },
 
   /**
@@ -26,21 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("buyer on load" + getApp().globalData.serverUrl);
-    var that = this;
-    //
-    wx.request({
-      url: getApp().globalData.serverUrl + 'buyerAction_listJson.action',
-      header: {
-        'Cookie': getApp().globalData.header.Cookie
-      },
-      success: function (res) {
-        console.log(res.data);
-        that.setData({
-          list: res.data
-        });
-      }
-    })
+  
   },
 
   /**
@@ -76,11 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  toCreate:function(){
-    //打开创建新用户页面
-    wx.navigateTo({
-      url: '/pages/newBuyer/newBuyer'
-    })
   }
 })

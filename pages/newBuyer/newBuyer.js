@@ -76,7 +76,9 @@ Page({
         'Cookie': header.Cookie 
       },
       success: function (res) {
-        console.log(res.data);
+        wx.switchTab({
+          url: '/pages/buyer/buyer'
+        })
         
       }
     })
