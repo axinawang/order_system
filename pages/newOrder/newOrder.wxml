@@ -1,37 +1,47 @@
 <form bindsubmit="formSubmit" bindreset="formReset" class='container'>
- 
+    <picker bindchange="buyerChange" range-key="name" value="{{buyerListIndex}}" range="{{buyerList}}">  
+        <view class="picker">  
+      请选择买家》》  
+        </view>  
+    </picker> 
     <view class="flex_row">
      <view >姓名： </view>
-     <input name="buyerName" placeholder="姓名" />      
+     <input name="buyerName" placeholder="姓名" value='{{buyerList[buyerListIndex].name}}' />      
     </view>
     <view class="flex_row">
      <view >电话： </view>
-     <input name="telephone" placeholder="电话" />      
+     <input name="telephone" placeholder="电话" value='{{buyerList[buyerListIndex].telephone}}' />      
     </view>
     <view class="flex_row">
      <view >地址： </view>
-     <input name="address" placeholder="地址" />      
+     <input name="address" placeholder="地址" value='{{buyerList[buyerListIndex].address}}'/>      
     </view>
 
+   <picker bindchange="productChange" range-key="name" value="{{productListIndex}}" range="{{productList}}">  
+        <view class="picker">  
+      请选择商品》》  
+        </view>  
+    </picker>
+    <input name="orderProducts[0].productId" value='{{productList[productListIndex].id}}' />
     <view class="flex_row">
      <view >商品名称： </view>
-     <input name="productName" placeholder="商品名称" />      
+     <input name="orderProducts[0].productName" placeholder="商品名称"  value='{{productList[productListIndex].name}}' />      
     </view>
     <view class="flex_row">
      <view >商品单价： </view>
-     <input name="sellingPrice" placeholder="商品单价" />      
+     <input name="orderProducts[0].sellingPrice" placeholder="商品单价"  value='{{productList[productListIndex].sellingPrice}}'/>      
     </view>
     <view class="flex_row">
      <view >数量： </view>
-     <input name="productNumber" placeholder="数量" />      
+     <input name="orderProducts[0].productNumber" placeholder="数量" />      
     </view>
     <view class="flex_row">
      <view >总价： </view>
      <input name="totalPrice" />      
     </view>
 
-  <view class="btn-area">
-    <button formType="submit">提交</button>
-    <button formType="reset">重置</button>
+  <view class="btn_submit_reset">
+    <button formType="submit">创建</button>
+    <button formType="reset">清空</button>
   </view>
 </form>

@@ -1,2 +1,29 @@
-<!--pages/product/product.wxml-->
-<text>pages/product/product.wxml</text>
+<view class='container'>
+
+  <view>
+    <button type="primary" bindtap="toCreate"> 创建新商品 </button>
+  </view>
+
+  <scroll-view>
+    <view class='nav'>
+      <view>
+        <text class="row_title">名称</text>
+      </view>
+      <view>
+        <text class="row_title">销售价</text>
+      </view>
+    </view>
+    <block wx:for="{{list}}">
+      <view class="divLine"></view>
+      <navigator class="nav" url="../productDetail/productDetail?name={{item.name}}&description={{item.description}}&sellingPrice={{item.sellingPrice}}&buyingPrice={{item.buyingPrice}}" hover-class="navigator-hover">
+        <view>
+          <text class="row_content">{{item.name}}</text>
+        </view>
+        <view>
+          <text class="row_content">{{item.sellingPrice}}</text>
+        </view>
+      </navigator>
+    </block>
+  </scroll-view>
+
+</view>

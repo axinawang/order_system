@@ -1,0 +1,9 @@
+<view class="section">
+  <view class="section__title">商品详细信息</view>
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item bc_green">名称：{{name}}</view>
+    <view class="flex-item bc_red">描述：{{description}}</view>
+    <view class="flex-item bc_blue">销售价：{{sellingPrice}}</view>
+     <view class="flex-item bc_blue">拿货价：{{buyingPrice}}</view>
+  </view>
+</view>

@@ -1,1 +1,4 @@
-/* pages/newOrder/newOrder.wxss */
+.btn_submit_reset {
+     display: flex;
+     flex-direction: row;
+}

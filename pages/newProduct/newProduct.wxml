@@ -1,0 +1,27 @@
+<form bindsubmit="formSubmit" bindreset="formReset" class='container'>
+
+    <view class="flex_row">
+     <view >名称： </view>
+     <input name="name" placeholder="名称" />      
+    </view>
+    <view class="flex_row">
+     <view >描述： </view>
+     <input name="description" placeholder="描述" />      
+    </view>
+    <view class="flex_row">
+     <view >销售价： </view>
+     <input name="sellingPrice" placeholder="销售价" />      
+    </view>
+    <view class="flex_row">
+     <view >拿货价： </view>
+     <input name="buyingPrice" placeholder="拿货价" />      
+    </view>
+
+    
+
+  <view class="btn-area">
+    <button formType="submit">提交</button>
+    <button formType="reset">重置</button>
+  </view>
+</form>
+

@@ -10,7 +10,9 @@
     "pages/me/me",
     "pages/login/login",
     "pages/newOrder/newOrder",
-    "pages/product/product"
+    "pages/product/product",
+    "pages/newProduct/newProduct",
+    "pages/productDetail/productDetail"
   ],
   "window":{
     "backgroundTextStyle":"light",

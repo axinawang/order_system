@@ -1,9 +1,29 @@
- <button type="primary" bindtap="toCreate"> 创建新用户 </button>
- <block wx:for="{{list}}">
-    <navigator url="../buyerDetail/buyerDetail?id={{item.id}}" hover-class="navigator-hover">
-    
-    <view class="right">
-    <text class="title">{{item.name}}</text>
+<view class='container'>
+
+  <view>
+    <button type="primary" bindtap="toCreate"> 创建新客户 </button>
+  </view>
+
+  <scroll-view>
+    <view class='nav'>
+      <view>
+        <text class="row_title">姓名</text>
+      </view>
+      <view>
+        <text class="row_title">电话</text>
+      </view>
     </view>
-</navigator>
-</block>
+    <block wx:for="{{list}}">
+      <view class="divLine"></view>
+      <navigator class="nav" url="../buyerDetail/buyerDetail?name={{item.name}}&telephone={{item.telephone}}&address={{item.address}}&remark={{item.remark}}" hover-class="navigator-hover">
+        <view>
+          <text class="row_content">{{item.name}}</text>
+        </view>
+        <view>
+          <text class="row_content">{{item.telephone}}</text>
+        </view>
+      </navigator>
+    </block>
+  </scroll-view>
+
+</view>

@@ -1,1 +1,21 @@
 /* pages/buyer/buyer.wxss */
+
+.nav{
+  display: flex;
+ justify-content: space-around;
+}
+.row_title{
+  text-align: left;
+  font-size: 1.5rem;
+}
+.row_content{
+  font-size: 1.2rem;
+  color: green;
+  padding: 2px;
+}
+/*分割线样式*/
+.divLine{
+ background: #f3f3f3;
+ width: 100%;
+ height: 1rpx;
+}

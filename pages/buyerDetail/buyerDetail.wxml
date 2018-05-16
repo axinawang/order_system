@@ -1,2 +1,11 @@
 <!--pages/buyerDetail/buyerDetail.wxml-->
-<text>pages/buyerDetail/buyerDetail.wxml</text>
+
+<view class="section">
+  <view class="section__title">客户详细信息</view>
+  <view class="flex-wrp" style="flex-direction:column;">
+    <view class="flex-item bc_green">姓名：{{name}}</view>
+    <view class="flex-item bc_red">电话：{{telephone}}</view>
+    <view class="flex-item bc_blue">地址：{{address}}</view>
+     <view class="flex-item bc_blue">备注：{{remark}}</view>
+  </view>
+</view>

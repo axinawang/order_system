@@ -1,26 +1,18 @@
-// pages/buyerDetail/buyerDetail.js
+// pages/newProduct/newProduct.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    telephone:'',
-    address:'',
-    remark:''  
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      name: options.name,
-      telephone:options.telephone,
-      address: options.address,
-      remark: options.remark 
-    })    
+  
   },
 
   /**
@@ -70,5 +62,28 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+/**
+ * 提交新商品信息到服务器
+ */
+  formSubmit: function (e) {
+    var that = this;
+    var formData = e.detail.value;
+    console.log("new product info :"+formData);
+     
+    wx.request({
+      url: getApp().globalData.serverUrl + 'productAction_insert.action',
+      data: formData,
+      header: {
+        'Content-Type': 'application/json',
+        'Cookie': getApp().globalData.header.Cookie
+      },
+      success: function (res) {
+        wx.switchTab({
+          url: '/pages/product/product'
+        })
+
+      }
+    })
   }
 })

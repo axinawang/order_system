@@ -1,14 +1,14 @@
-// pages/buyerDetail/buyerDetail.js
+// pages/productDetail/productDetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    name:'',
-    telephone:'',
-    address:'',
-    remark:''  
+    name: '',
+    description: '',
+    buyingPrice:'',
+    sellingPrice:''
   },
 
   /**
@@ -17,9 +17,9 @@ Page({
   onLoad: function (options) {
     this.setData({
       name: options.name,
-      telephone:options.telephone,
-      address: options.address,
-      remark: options.remark 
+      description: options.description,
+      sellingPrice: options.sellingPrice,
+      buyingPrice: options.buyingPrice
     })    
   },
 

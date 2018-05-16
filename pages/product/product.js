@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    list: null
   },
 
   /**
@@ -26,7 +26,21 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    console.log("product on show" + getApp().globalData.serverUrl);
+    var that = this;
+    //
+    wx.request({
+      url: getApp().globalData.serverUrl + 'productAction_listJson.action',
+      header: {
+        'Cookie': getApp().globalData.header.Cookie
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          list: res.data
+        });
+      }
+    })
   },
 
   /**
@@ -62,5 +76,14 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+/**
+ *  打开创建新商品页面
+ */
+   toCreate: function () {   
+    wx.navigateTo({
+      url: '/pages/newProduct/newProduct'
+    })
   }
 })
